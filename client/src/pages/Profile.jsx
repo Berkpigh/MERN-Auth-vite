@@ -62,14 +62,14 @@ export default function Profile() {
       request.resource.contentType.matches('image/.*'); */}
 
         <img
-          src={currentUser.profilePicture}
+          src={formData.profilePicture || currentUser.profilePicture}
           alt="profile"
           className="h-24 w-24 self-center cursor-pointer rounded-full object-cover mt-2"
           onClick={() => fileRef.current.click()}
         />
         <p className="text-sm self-center">
           {imageError ? (
-            <span className="text-red-700">Error uploading image</span>
+            <span className="text-red-700">Error uploading image (file size must be less than 2 MB)</span>
            ) : (
               imagePercent > 0 && imagePercent < 100
               ) ? (
