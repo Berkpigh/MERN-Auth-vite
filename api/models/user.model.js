@@ -17,9 +17,9 @@ const userSchema = new mongoose.Schema({
     },
     profilePicture: {
         type: String,
-        default: '../assets/profile.jpg',
+        default: 'https://lh3.googleusercontent.com/a/ACg8ocK_UKfS7RP7yGzP5tm5vRJmGvboxV1SRWavAIr8CaY0YQ=s96-c-rg-br100',
     },
-}, {timestamp: true})
+}, { timestamps: true })
 
 const User = mongoose.model('User', userSchema)
 
